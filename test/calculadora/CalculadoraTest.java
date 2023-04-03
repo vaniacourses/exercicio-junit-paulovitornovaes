@@ -55,5 +55,14 @@ public class CalculadoraTest {
 		int subtracao = calc.subtracao(10, 5);
 		assertTrue(subtracao == 5);
 	}
+	
+	@Test
+	public void testMultiplicacaoDoisNumeros() {
+		int multiplicacao = calc.multiplicacao(10, 5);
+		assertTrue(multiplicacao == 50);
+	}
+	
+	
+	
 
 }
