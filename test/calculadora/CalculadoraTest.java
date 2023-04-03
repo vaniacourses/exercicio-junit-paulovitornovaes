@@ -4,6 +4,7 @@ package calculadora;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Assertions;
@@ -66,6 +67,19 @@ public class CalculadoraTest {
 	public void testSomatoria() {
 		int somatoria = calc.somatoria(10);
 		assertTrue(somatoria == 55);
+	}
+	
+	@DisplayName("Testa se um número positivo é positivo")
+	@Test
+	public void testPositivoTrue() {
+		boolean positivo = calc.ehPositivo(10);
+		assertTrue(positivo);
+	}
+	@DisplayName("Testa se um número negativo é positivo.")
+	@Test
+	public void testPositivoFalse() {
+		boolean positivo = calc.ehPositivo(-10);
+		assertFalse(positivo);
 	}
 	
 
