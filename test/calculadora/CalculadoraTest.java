@@ -81,6 +81,23 @@ public class CalculadoraTest {
 		boolean positivo = calc.ehPositivo(-10);
 		assertFalse(positivo);
 	}
-	
+	@DisplayName("Testa se os números são iguais.")
+	@Test
+	public void testComparaNumerosIguais() {
+		int comparativo = calc.compara(10, 10);
+		assertEquals(0, comparativo);
+	}
+	@DisplayName("Testa se o primeiro número é maior que o segundo número.")
+	@Test
+	public void testComparaNumeroMaior() {
+		int comparativo = calc.compara(10,5);
+		assertEquals(1, comparativo);
+	}
+	@DisplayName("Testa se o primeiro número é menor que o segundo número.")
+	@Test
+	public void testComparaNumeroMenor() {
+		int comparativo = calc.compara(5,10);
+		assertEquals(-1, comparativo);
+	}
 
 }
