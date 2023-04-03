@@ -62,7 +62,11 @@ public class CalculadoraTest {
 		assertTrue(multiplicacao == 50);
 	}
 	
-	
+	@Test
+	public void testSomatoria() {
+		int somatoria = calc.somatoria(10);
+		assertTrue(somatoria == 55);
+	}
 	
 
 }
