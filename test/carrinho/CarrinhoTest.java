@@ -31,7 +31,18 @@ public class CarrinhoTest {
 		car.addItem(p3);
 		
 	}
+	@Test
+	public void testQuantidadeProdutos() {
+		int qteItems = car.getQtdeItems();
+		assertEquals(3, qteItems);
+	}
 	
+	@Test
+	public void testValidaValorTotal() {
+		double valor_total = car.getValorTotal();
+		
+		assertEquals(30, valor_total);
+	}
 	
 	
 }
